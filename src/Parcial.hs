@@ -62,4 +62,4 @@ permitirPerro :: Perro -> Guarderia -> Bool
 permitirPerro unPerro unaGuarderia = tiempo unPerro >= sum . map snd . actividades $ unaGuarderia
 
 esPerroResponsable :: Perro -> Bool
-esPerroResponsable unPerro = (cantidadDeJuguetes . diaDeCampo $ unPerro) > 3
+esPerroResponsable unPerro = (>3) . cantidadDeJuguetes . diaDeCampo $ unPerro
